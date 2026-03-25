@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <clipPath id="circ"><circle cx="128" cy="128" r="120"/></clipPath>
+    <radialGradient id="bg" cx="40%" cy="30%"><stop offset="0%" stop-color="#2e2820"/>
+      <stop offset="100%" stop-color="#16140e"/></radialGradient>
+    <linearGradient id="rodgrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DA701C"/>
+      <stop offset="40%" stop-color="#F59B3A"/>
+      <stop offset="100%" stop-color="#C1550F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fond -->
+  <circle cx="128" cy="128" r="122" fill="url(#bg)"/>
+
+  <!-- Couches sol clippées -->
+  <g clip-path="url(#circ)">
+    <rect x="0" y="143" width="256" height="40" fill="#6A411C" opacity="0.85"/>
+    <rect x="0" y="183" width="256" height="38" fill="#8E6230" opacity="0.85"/>
+    <rect x="0" y="221" width="256" height="35" fill="#B28747" opacity="0.85"/>
+  </g>
+
+  <!-- Tige CPT -->
+  <rect x="121" y="38" width="14" height="88" rx="2" fill="url(#rodgrad)"/>
+  <!-- Highlight tige -->
+  <rect x="123" y="42" width="3" height="80" rx="1" fill="#F5C070" opacity="0.45"/>
+  <!-- Manchon de friction -->
+  <rect x="118" y="94" width="20" height="26" rx="2" fill="#C1550F"/>
+  <rect x="120" y="96" width="3" height="22" rx="1" fill="#F59B3A" opacity="0.4"/>
+  <!-- Cône -->
+  <polygon points="115,126 141,126 128,158" fill="#C1550F"/>
+  <polygon points="115,126 141,126 128,158" fill="none" stroke="#F59B3A" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Texte CPT -->
+  <text x="128" y="35" text-anchor="middle" font-family="Arial Black, Arial" font-weight="900"
+        font-size="28" fill="#0000007a" dx="1.5" dy="1.5">CPT</text>
+  <text x="128" y="35" text-anchor="middle" font-family="Arial Black, Arial" font-weight="900"
+        font-size="28" fill="#F0E1C3">CPT</text>
+
+  <!-- Bordure orange -->
+  <circle cx="128" cy="128" r="120" fill="none" stroke="#DA701C" stroke-width="5"/>
+  <circle cx="128" cy="128" r="114" fill="none" stroke="#C1550F" stroke-width="1.5" opacity="0.5"/>
+</svg>

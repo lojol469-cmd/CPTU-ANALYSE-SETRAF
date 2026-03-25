@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "template_version": "1.0",
+    "based_on_pdf": "3-Etude-dangers-avec-annexes_v2.pdf",
+    "creation_date": "2026-01-26T12:39:17.910895"
+  },
+  "sections": {
+    "lightning_analysis": {
+      "description": "Analyse des risques liés à la foudre",
+      "data_structure": {
+        "nsg_impacts_per_km2_per_year": "float",
+        "confidence_index": "string",
+        "confidence_interval": "array[float]",
+        "storm_days_per_year": "int"
+      },
+      "sample_data": {
+        "nsg_impacts_per_km2_per_year": 1.45,
+        "confidence_index": "Excellent",
+        "confidence_interval": [
+          1.29,
+          1.64
+        ],
+        "storm_days_per_year": 13,
+        "record_month": ""
+      }
+    },
+    "fire_modeling": {
+      "description": "Modélisation des incendies avec FLUMILOG",
+      "data_structure": {
+        "project_name": "string",
+        "cell": "string",
+        "fire_duration_minutes": "float",
+        "thermal_fluxes_kw_m2": "array[int]",
+        "effects_distances_info": "string"
+      },
+      "sample_data": {
+        "project_name": "Cellule :",
+        "cell": "Commentaire :",
+        "company": "Nom du Projet :",
+        "user": "Société :"
+      }
+    },
+    "environmental_characterization": {
+      "description": "Caractérisation de l'environnement",
+      "sections": [
+        "aléas_naturels",
+        "aléas_technologiques",
+        "population",
+        "environnement"
+      ]
+    },
+    "risk_scenarios": {
+      "description": "Scénarios d'accidents et évaluation des risques",
+      "methodology": "Analyse préliminaire des risques (ERC) puis quantitative"
+    }
+  },
+  "implementation_plan": {
+    "phase_1": "Extraction et analyse des données environnementales",
+    "phase_2": "Implémentation des modèles de calcul (foudre, incendie)",
+    "phase_3": "Développement de l'interface utilisateur",
+    "phase_4": "Validation et tests avec données réelles"
+  }
+}

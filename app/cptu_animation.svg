@@ -1,0 +1,253 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1100 640"
+     width="1100" height="640"
+     preserveAspectRatio="xMidYMid meet"
+     style="background:#16140e;font-family:Arial,sans-serif;">
+<defs>
+  <linearGradient id="rodgrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%"   stop-color="#C1550F"/>
+    <stop offset="100%" stop-color="#F59B3A"/>
+  </linearGradient>
+  <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="2.5" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <clipPath id="cp1"><rect x="32" y="82" width="254" height="514"/></clipPath>
+  <clipPath id="cp2"><rect x="296" y="82" width="254" height="514"/></clipPath>
+  <clipPath id="cp3"><rect x="560" y="82" width="254" height="514"/></clipPath>
+  <clipPath id="cp4"><rect x="824" y="82" width="254" height="514"/></clipPath>
+</defs>
+<style>
+    @keyframes solidFade { from { opacity:0; } to { opacity:0.85; } }
+    @keyframes textFade  { from { opacity:0; } to { opacity:1.0;  } }
+    @keyframes icFade    { from { opacity:0; } to { opacity:0.82; } }
+    @keyframes drawQc    { to   { stroke-dashoffset:0; } }
+    @keyframes drawFs    { to   { stroke-dashoffset:0; } }
+    @keyframes coneDrop  {
+      0%   { transform: translate(159px, 70px); }
+      100% { transform: translate(159px, 584px); }
+    }
+    .sl  { opacity:0;   animation: solidFade 0.45s forwards; }
+    .lt  { opacity:0;   animation: textFade  0.35s forwards; }
+    .ld  { opacity:0.7; }
+    .ic  { opacity:0;   animation: icFade    0.06s forwards; }
+    .qcl {
+      stroke-dasharray: 1278 1278;
+      stroke-dashoffset: 1278;
+      animation: drawQc 5s linear 0.15s forwards;
+    }
+    .fsl {
+      stroke-dasharray: 1278 1278;
+      stroke-dashoffset: 1278;
+      animation: drawFs 5s linear 0.5s forwards;
+    }
+    .cone-grp {
+      animation: coneDrop 5s ease-in 0s forwards;
+    }
+    </style>
+
+<!-- Fond -->
+<rect width="1100" height="640" fill="#16140e"/>
+
+<!-- Séparateurs panneaux -->
+<g stroke="#2a2018" stroke-width="1" opacity="0.6">
+  <line x1="291" y1="60" x2="291" y2="626"/>
+  <line x1="555" y1="60" x2="555" y2="626"/>
+  <line x1="819" y1="60" x2="819" y2="626"/>
+</g>
+
+<!-- Titre -->
+<text x="550" y="28" text-anchor="middle"
+  font-size="20" font-weight="900" fill="#F59B3A" letter-spacing="3">CPTU</text>
+<text x="550" y="46" text-anchor="middle"
+  font-size="10" fill="#a07840" letter-spacing="2">ANALYSE GÉOTECHNIQUE — DONNÉES RÉELLES</text>
+<rect x="80" y="52" width="940" height="1.5" rx="1"
+  fill="#DA701C" opacity="0.5"/>
+
+<!-- Titres panneaux -->
+<text x="159" y="73" text-anchor="middle" font-size="11" font-weight="bold" fill="#F59B3A">Sol (Robertson)</text>
+<text x="423" y="73" text-anchor="middle" font-size="11" font-weight="bold" fill="#F59B3A">qc (MPa)</text>
+<text x="687" y="73" text-anchor="middle" font-size="11" font-weight="bold" fill="#4ab8d8">fs (kPa)</text>
+<text x="951" y="73" text-anchor="middle" font-size="11" font-weight="bold" fill="#aaccaa">Ic Robertson</text>
+
+
+<!-- Axe profondeur -->
+<line x1="32" y1="82" x2="1078" y2="82" stroke="#2a2018" stroke-width="0.5" opacity="0.4"/>
+<text x="28" y="86" text-anchor="end" font-size="9" fill="#a07840">0.0m</text>
+<line x1="32" y1="133" x2="1078" y2="133" stroke="#2a2018" stroke-width="0.5" opacity="0.4"/>
+<text x="28" y="137" text-anchor="end" font-size="9" fill="#a07840">2.0m</text>
+<line x1="32" y1="184" x2="1078" y2="184" stroke="#2a2018" stroke-width="0.5" opacity="0.4"/>
+<text x="28" y="188" text-anchor="end" font-size="9" fill="#a07840">4.0m</text>
+<line x1="32" y1="236" x2="1078" y2="236" stroke="#2a2018" stroke-width="0.5" opacity="0.4"/>
+<text x="28" y="240" text-anchor="end" font-size="9" fill="#a07840">6.0m</text>
+<line x1="32" y1="287" x2="1078" y2="287" stroke="#2a2018" stroke-width="0.5" opacity="0.4"/>
+<text x="28" y="291" text-anchor="end" font-size="9" fill="#a07840">8.0m</text>
+<line x1="32" y1="339" x2="1078" y2="339" stroke="#2a2018" stroke-width="0.5" opacity="0.4"/>
+<text x="28" y="343" text-anchor="end" font-size="9" fill="#a07840">10.0m</text>
+<line x1="32" y1="390" x2="1078" y2="390" stroke="#2a2018" stroke-width="0.5" opacity="0.4"/>
+<text x="28" y="394" text-anchor="end" font-size="9" fill="#a07840">12.0m</text>
+<line x1="32" y1="441" x2="1078" y2="441" stroke="#2a2018" stroke-width="0.5" opacity="0.4"/>
+<text x="28" y="445" text-anchor="end" font-size="9" fill="#a07840">14.0m</text>
+<line x1="32" y1="493" x2="1078" y2="493" stroke="#2a2018" stroke-width="0.5" opacity="0.4"/>
+<text x="28" y="497" text-anchor="end" font-size="9" fill="#a07840">16.0m</text>
+<line x1="32" y1="544" x2="1078" y2="544" stroke="#2a2018" stroke-width="0.5" opacity="0.4"/>
+<text x="28" y="548" text-anchor="end" font-size="9" fill="#a07840">18.0m</text>
+<line x1="32" y1="596" x2="1078" y2="596" stroke="#2a2018" stroke-width="0.5" opacity="0.4"/>
+<text x="28" y="600" text-anchor="end" font-size="9" fill="#a07840">20.0m</text>
+
+
+<!-- Fonds panneaux -->
+<rect x="32" y="82" width="254" height="514" fill="#1a1208" rx="2"/>
+<rect x="296" y="82" width="254" height="514" fill="#1a1208" rx="2"/>
+<rect x="560" y="82" width="254" height="514" fill="#1a1208" rx="2"/>
+<rect x="824" y="82" width="254" height="514" fill="#1a1208" rx="2"/>
+
+<!-- PANNEAU 1 : Sol Robertson -->
+<rect class="sl" clip-path="url(#cp1)" x="32" y="82.0" width="254" height="2.0" fill="#3CB371" style="animation-delay:0.00s"/>
+<line x1="32" y1="82.0" x2="286" y2="82.0" stroke="#16140e" stroke-width="1.5" opacity="0.6"/>
+<rect class="sl" clip-path="url(#cp1)" x="32" y="94.8" width="254" height="64.2" fill="#556B2F" style="animation-delay:0.22s"/>
+<line x1="32" y1="159.1" x2="286" y2="159.1" stroke="#16140e" stroke-width="1.5" opacity="0.6"/>
+<text class="lt" clip-path="url(#cp1)" x="36" y="131.0" font-size="9" fill="#F0E1C3" style="animation-delay:0.52s">Silt argileux</text>
+<text class="ld" clip-path="url(#cp1)" x="36" y="141.0" font-size="7.5" fill="#a07840">qc=4.33 MPa</text>
+<rect class="sl" clip-path="url(#cp1)" x="32" y="171.9" width="254" height="2.0" fill="#6B8E23" style="animation-delay:0.44s"/>
+<line x1="32" y1="171.9" x2="286" y2="171.9" stroke="#16140e" stroke-width="1.5" opacity="0.6"/>
+<rect class="sl" clip-path="url(#cp1)" x="32" y="184.8" width="254" height="128.5" fill="#556B2F" style="animation-delay:0.66s"/>
+<line x1="32" y1="313.3" x2="286" y2="313.3" stroke="#16140e" stroke-width="1.5" opacity="0.6"/>
+<text class="lt" clip-path="url(#cp1)" x="36" y="253.1" font-size="9" fill="#F0E1C3" style="animation-delay:0.96s">Silt argileux</text>
+<text class="ld" clip-path="url(#cp1)" x="36" y="263.1" font-size="7.5" fill="#a07840">qc=3.73 MPa</text>
+<rect class="sl" clip-path="url(#cp1)" x="32" y="326.1" width="254" height="2.0" fill="#6B8E23" style="animation-delay:0.88s"/>
+<line x1="32" y1="326.1" x2="286" y2="326.1" stroke="#16140e" stroke-width="1.5" opacity="0.6"/>
+<rect class="sl" clip-path="url(#cp1)" x="32" y="339.0" width="254" height="2.0" fill="#556B2F" style="animation-delay:1.10s"/>
+<line x1="32" y1="339.0" x2="286" y2="339.0" stroke="#16140e" stroke-width="1.5" opacity="0.6"/>
+<rect class="sl" clip-path="url(#cp1)" x="32" y="351.9" width="254" height="38.5" fill="#6B8E23" style="animation-delay:1.32s"/>
+<line x1="32" y1="390.4" x2="286" y2="390.4" stroke="#16140e" stroke-width="1.5" opacity="0.6"/>
+<text class="lt" clip-path="url(#cp1)" x="36" y="375.1" font-size="9" fill="#F0E1C3" style="animation-delay:1.62s">Silt sableux</text>
+<text class="ld" clip-path="url(#cp1)" x="36" y="385.1" font-size="7.5" fill="#a07840">qc=8.38 MPa</text>
+<rect class="sl" clip-path="url(#cp1)" x="32" y="403.2" width="254" height="12.9" fill="#556B2F" style="animation-delay:1.54s"/>
+<line x1="32" y1="416.1" x2="286" y2="416.1" stroke="#16140e" stroke-width="1.5" opacity="0.6"/>
+<rect class="sl" clip-path="url(#cp1)" x="32" y="429.0" width="254" height="51.4" fill="#6B8E23" style="animation-delay:1.76s"/>
+<line x1="32" y1="480.4" x2="286" y2="480.4" stroke="#16140e" stroke-width="1.5" opacity="0.6"/>
+<text class="lt" clip-path="url(#cp1)" x="36" y="458.7" font-size="9" fill="#F0E1C3" style="animation-delay:2.06s">Silt sableux</text>
+<text class="ld" clip-path="url(#cp1)" x="36" y="468.7" font-size="7.5" fill="#a07840">qc=9.6 MPa</text>
+<rect class="sl" clip-path="url(#cp1)" x="32" y="493.2" width="254" height="2.0" fill="#556B2F" style="animation-delay:1.98s"/>
+<line x1="32" y1="493.2" x2="286" y2="493.2" stroke="#16140e" stroke-width="1.5" opacity="0.6"/>
+<rect class="sl" clip-path="url(#cp1)" x="32" y="506.0" width="254" height="2.0" fill="#6B8E23" style="animation-delay:2.20s"/>
+<line x1="32" y1="506.0" x2="286" y2="506.0" stroke="#16140e" stroke-width="1.5" opacity="0.6"/>
+<rect class="sl" clip-path="url(#cp1)" x="32" y="518.9" width="254" height="2.0" fill="#556B2F" style="animation-delay:2.42s"/>
+<line x1="32" y1="518.9" x2="286" y2="518.9" stroke="#16140e" stroke-width="1.5" opacity="0.6"/>
+<rect class="sl" clip-path="url(#cp1)" x="32" y="531.8" width="254" height="38.5" fill="#6B8E23" style="animation-delay:2.64s"/>
+<line x1="32" y1="570.3" x2="286" y2="570.3" stroke="#16140e" stroke-width="1.5" opacity="0.6"/>
+<text class="lt" clip-path="url(#cp1)" x="36" y="555.0" font-size="9" fill="#F0E1C3" style="animation-delay:2.94s">Silt sableux</text>
+<text class="ld" clip-path="url(#cp1)" x="36" y="565.0" font-size="7.5" fill="#a07840">qc=6.88 MPa</text>
+<rect class="sl" clip-path="url(#cp1)" x="32" y="583.1" width="254" height="2.0" fill="#556B2F" style="animation-delay:2.86s"/>
+<line x1="32" y1="583.1" x2="286" y2="583.1" stroke="#16140e" stroke-width="1.5" opacity="0.6"/>
+<rect class="sl" clip-path="url(#cp1)" x="32" y="596.0" width="254" height="2.0" fill="#6B8E23" style="animation-delay:3.08s"/>
+<line x1="32" y1="596.0" x2="286" y2="596.0" stroke="#16140e" stroke-width="1.5" opacity="0.6"/>
+
+
+<!-- PANNEAU 2 : qc -->
+<line x1="346" y1="82" x2="346" y2="596" stroke="#2a2018" stroke-width="0.7"/>
+<text x="346" y="609" text-anchor="middle" font-size="8" fill="#a07840">2.8</text>
+<line x1="397" y1="82" x2="397" y2="596" stroke="#2a2018" stroke-width="0.7"/>
+<text x="397" y="609" text-anchor="middle" font-size="8" fill="#a07840">5.6</text>
+<line x1="448" y1="82" x2="448" y2="596" stroke="#2a2018" stroke-width="0.7"/>
+<text x="448" y="609" text-anchor="middle" font-size="8" fill="#a07840">8.4</text>
+<line x1="499" y1="82" x2="499" y2="596" stroke="#2a2018" stroke-width="0.7"/>
+<text x="499" y="609" text-anchor="middle" font-size="8" fill="#a07840">11.2</text>
+<line x1="550" y1="82" x2="550" y2="596" stroke="#2a2018" stroke-width="0.7"/>
+<text x="550" y="609" text-anchor="middle" font-size="8" fill="#a07840">14.0</text>
+
+<polygon points="296,596 296,82.0 350,94.8 368,107.7 377,120.5 377,133.4 377,146.2 395,159.1 423,171.9 404,184.8 386,197.7 359,210.5 341,223.4 341,236.2 332,249.1 341,261.9 350,274.8 350,287.6 386,300.4 404,313.3 423,326.1 386,339.0 423,351.9 459,364.7 468,377.5 441,390.4 404,403.2 386,416.1 477,429.0 550,441.8 441,454.6 441,467.5 441,480.4 404,493.2 423,506.0 386,518.9 423,531.8 423,544.6 423,557.5 413,570.3 386,583.1 441,596.0 441,596" fill="#C1550F" opacity="0.14" clip-path="url(#cp2)"/>
+<polyline class="qcl" points="296,82.0 350,94.8 368,107.7 377,120.5 377,133.4 377,146.2 395,159.1 423,171.9 404,184.8 386,197.7 359,210.5 341,223.4 341,236.2 332,249.1 341,261.9 350,274.8 350,287.6 386,300.4 404,313.3 423,326.1 386,339.0 423,351.9 459,364.7 468,377.5 441,390.4 404,403.2 386,416.1 477,429.0 550,441.8 441,454.6 441,467.5 441,480.4 404,493.2 423,506.0 386,518.9 423,531.8 423,544.6 423,557.5 413,570.3 386,583.1 441,596.0" fill="none"
+  stroke="#F59B3A" stroke-width="2" clip-path="url(#cp2)"/>
+
+<!-- PANNEAU 3 : fs -->
+<line x1="610" y1="82" x2="610" y2="596" stroke="#2a2018" stroke-width="0.7"/>
+<text x="610" y="609" text-anchor="middle" font-size="8" fill="#a07840">28</text>
+<line x1="661" y1="82" x2="661" y2="596" stroke="#2a2018" stroke-width="0.7"/>
+<text x="661" y="609" text-anchor="middle" font-size="8" fill="#a07840">56</text>
+<line x1="712" y1="82" x2="712" y2="596" stroke="#2a2018" stroke-width="0.7"/>
+<text x="712" y="609" text-anchor="middle" font-size="8" fill="#a07840">84</text>
+<line x1="763" y1="82" x2="763" y2="596" stroke="#2a2018" stroke-width="0.7"/>
+<text x="763" y="609" text-anchor="middle" font-size="8" fill="#a07840">112</text>
+<line x1="814" y1="82" x2="814" y2="596" stroke="#2a2018" stroke-width="0.7"/>
+<text x="814" y="609" text-anchor="middle" font-size="8" fill="#a07840">140</text>
+
+<polygon points="560,596 560,82.0 614,94.8 632,107.7 641,120.5 641,133.4 641,146.2 659,159.1 687,171.9 668,184.8 650,197.7 623,210.5 605,223.4 605,236.2 596,249.1 605,261.9 614,274.8 614,287.6 650,300.4 668,313.3 687,326.1 650,339.0 687,351.9 723,364.7 732,377.5 705,390.4 668,403.2 650,416.1 741,429.0 814,441.8 705,454.6 705,467.5 705,480.4 668,493.2 687,506.0 650,518.9 687,531.8 687,544.6 687,557.5 677,570.3 650,583.1 705,596.0 705,596" fill="#4ab8d8" opacity="0.12" clip-path="url(#cp3)"/>
+<polyline class="fsl" points="560,82.0 614,94.8 632,107.7 641,120.5 641,133.4 641,146.2 659,159.1 687,171.9 668,184.8 650,197.7 623,210.5 605,223.4 605,236.2 596,249.1 605,261.9 614,274.8 614,287.6 650,300.4 668,313.3 687,326.1 650,339.0 687,351.9 723,364.7 732,377.5 705,390.4 668,403.2 650,416.1 741,429.0 814,441.8 705,454.6 705,467.5 705,480.4 668,493.2 687,506.0 650,518.9 687,531.8 687,544.6 687,557.5 677,570.3 650,583.1 705,596.0" fill="none"
+  stroke="#4ab8d8" stroke-width="2" clip-path="url(#cp3)"/>
+
+<!-- PANNEAU 4 : Ic Robertson -->
+<rect class="ic" clip-path="url(#cp4)" x="824" y="82.0" width="254" height="12.5" fill="#3CB371" style="animation-delay:0.700s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="94.8" width="149" height="12.5" fill="#556B2F" style="animation-delay:0.798s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="107.7" width="143" height="12.5" fill="#556B2F" style="animation-delay:0.895s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="120.5" width="141" height="12.5" fill="#556B2F" style="animation-delay:0.993s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="133.4" width="141" height="12.5" fill="#556B2F" style="animation-delay:1.090s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="146.2" width="141" height="12.5" fill="#556B2F" style="animation-delay:1.188s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="159.1" width="138" height="12.5" fill="#556B2F" style="animation-delay:1.285s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="171.9" width="133" height="12.5" fill="#6B8E23" style="animation-delay:1.383s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="184.8" width="136" height="12.5" fill="#556B2F" style="animation-delay:1.480s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="197.7" width="139" height="12.5" fill="#556B2F" style="animation-delay:1.578s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="210.5" width="146" height="12.5" fill="#556B2F" style="animation-delay:1.676s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="223.4" width="152" height="12.5" fill="#556B2F" style="animation-delay:1.773s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="236.2" width="152" height="12.5" fill="#556B2F" style="animation-delay:1.871s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="249.1" width="156" height="12.5" fill="#556B2F" style="animation-delay:1.968s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="261.9" width="152" height="12.5" fill="#556B2F" style="animation-delay:2.066s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="274.8" width="149" height="12.5" fill="#556B2F" style="animation-delay:2.163s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="287.6" width="149" height="12.5" fill="#556B2F" style="animation-delay:2.261s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="300.4" width="139" height="12.5" fill="#556B2F" style="animation-delay:2.359s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="313.3" width="136" height="12.5" fill="#556B2F" style="animation-delay:2.456s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="326.1" width="133" height="12.5" fill="#6B8E23" style="animation-delay:2.554s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="339.0" width="139" height="12.5" fill="#556B2F" style="animation-delay:2.651s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="351.9" width="133" height="12.5" fill="#6B8E23" style="animation-delay:2.749s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="364.7" width="129" height="12.5" fill="#6B8E23" style="animation-delay:2.846s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="377.5" width="128" height="12.5" fill="#6B8E23" style="animation-delay:2.944s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="390.4" width="131" height="12.5" fill="#6B8E23" style="animation-delay:3.041s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="403.2" width="136" height="12.5" fill="#556B2F" style="animation-delay:3.139s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="416.1" width="139" height="12.5" fill="#556B2F" style="animation-delay:3.237s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="429.0" width="127" height="12.5" fill="#6B8E23" style="animation-delay:3.334s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="441.8" width="121" height="12.5" fill="#6B8E23" style="animation-delay:3.432s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="454.6" width="131" height="12.5" fill="#6B8E23" style="animation-delay:3.529s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="467.5" width="131" height="12.5" fill="#6B8E23" style="animation-delay:3.627s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="480.4" width="131" height="12.5" fill="#6B8E23" style="animation-delay:3.724s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="493.2" width="136" height="12.5" fill="#556B2F" style="animation-delay:3.822s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="506.0" width="133" height="12.5" fill="#6B8E23" style="animation-delay:3.920s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="518.9" width="139" height="12.5" fill="#556B2F" style="animation-delay:4.017s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="531.8" width="133" height="12.5" fill="#6B8E23" style="animation-delay:4.115s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="544.6" width="133" height="12.5" fill="#6B8E23" style="animation-delay:4.212s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="557.5" width="133" height="12.5" fill="#6B8E23" style="animation-delay:4.310s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="570.3" width="135" height="12.5" fill="#6B8E23" style="animation-delay:4.407s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="583.1" width="139" height="12.5" fill="#556B2F" style="animation-delay:4.505s"/>
+<rect class="ic" clip-path="url(#cp4)" x="824" y="596.0" width="131" height="12.5" fill="#6B8E23" style="animation-delay:4.602s"/>
+
+<line x1="918" y1="82" x2="918" y2="596" stroke="#DAA520" stroke-width="1" stroke-dasharray="4,3" opacity="0.7"/>
+<text x="920" y="92" font-size="8" fill="#DAA520">2.05</text>
+<line x1="944" y1="82" x2="944" y2="596" stroke="#6B8E23" stroke-width="1" stroke-dasharray="4,3" opacity="0.7"/>
+<text x="946" y="92" font-size="8" fill="#6B8E23">2.60</text>
+<line x1="990" y1="82" x2="990" y2="596" stroke="#3CB371" stroke-width="1" stroke-dasharray="4,3" opacity="0.7"/>
+<text x="992" y="92" font-size="8" fill="#3CB371">3.60</text>
+
+
+<!-- Sonde CPT (CSS animée) -->
+<g class="cone-grp">
+  <line x1="0" y1="0" x2="0" y2="-18" stroke="url(#rodgrad)" stroke-width="4"/>
+  <polygon points="-7,0 7,0 0,14" fill="#C1550F" filter="url(#glow)"/>
+</g>
+
+
+<!-- Légende -->
+<rect x="32" y="616" width="10" height="10" fill="#6B8E23"/>
+<text x="45" y="625" font-size="8" fill="#F0E1C3">Silt sableux</text>
+<rect x="137" y="616" width="10" height="10" fill="#556B2F"/>
+<text x="150" y="625" font-size="8" fill="#F0E1C3">Silt argileux</text>
+<rect x="242" y="616" width="10" height="10" fill="#3CB371"/>
+<text x="255" y="625" font-size="8" fill="#F0E1C3">Argile</text>
+
+
+<!-- Statistiques -->
+<text x="32" y="632" font-size="8" fill="#a07840">qc max=14.0 MPa  |  fs max=140 kPa  |  Prof. max=20.0 m  |  41 points  |  15 couches</text>
+<text x="1092" y="632" text-anchor="end"
+  font-size="8" fill="#a07840">SETRAF CPT Analysis Studio © 2026</text>
+
+</svg>
