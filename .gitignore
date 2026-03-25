@@ -38,3 +38,8 @@ venv/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# ── Sécurité ──────────────────────────────────────────────────────────────
+security/__pycache__/
+security/sessions/
+# .env contient MONGO_URI, JWT_SECRET, CPT_SECRET_KEY — NE PAS committer

@@ -59,6 +59,17 @@ from core.data_integrity_checker import DataIntegrityChecker
 
 class MainWindow(QMainWindow):
     def __init__(self):
+        # ── Verrou sécurité : accès direct interdit ──────────────────────────
+        if not os.environ.get("CPT_APP_AUTHORIZED"):
+            from PySide6.QtWidgets import QMessageBox as _QMB
+            _QMB.critical(
+                None, "Accès refusé",
+                "Accès non autorisé.\n\n"
+                "Lancez l\'application via launch.bat\n"
+                "ou run.py après authentification."
+            )
+            raise SystemExit(1)
+        # ─────────────────────────────────────────────────────────────────────
         super().__init__()
         global RAG_SYSTEM_AVAILABLE  # Déclarer comme variable globale
         self.setWindowTitle("CPT Analysis Software - Puissant Logiciel Windows")
@@ -6503,6 +6514,12 @@ Réponds UNIQUEMENT avec: X=123.45, Y=67.89
             QMessageBox.warning(self, "Erreur", f"Erreur lors de l'export individuel: {e}")
 
 if __name__ == '__main__':
+    # ── Verrou sécurité : exécution directe interdite ────────────────────
+    if not os.environ.get("CPT_APP_AUTHORIZED"):
+        print("ERREUR : Accès non autorisé.")
+        print("Lancez l'application via launch.bat")
+        sys.exit(1)
+    # ─────────────────────────────────────────────────────────────────────
     app = QApplication(sys.argv)
 
     # ── Splash screen avec animation SVG ─────────────────────────────────────
