@@ -46,10 +46,20 @@ from PySide6.QtCore import QTimer
 app = QApplication(sys.argv)
 app.setApplicationName("SETRAF CPT Analysis Studio")
 
-# ── Authentification ──────────────────────────────────────────────────────────
+# ── Étape 1 : Code PIN d'accès (avant toute connexion réseau) ────────────────
+try:
+    from pin_dialog import PinDialog
+    _pin_dlg = PinDialog()
+    if _pin_dlg.exec() != QDialog.Accepted:
+        sys.exit(0)
+except ImportError:
+    pass   # module absent → pas de blocage PIN
+
+# ── Étape 2 : Authentification OTP + MongoDB ──────────────────────────
 try:
     from auth_manager import AuthManager
     from auth_dialog  import AuthDialog, SessionLockScreen
+    from folder_lock  import lock as _lock_app, unlock as _unlock_app, is_locked as _app_is_locked
 except ImportError as e:
     QMessageBox.critical(
         None, "Module sécurité manquant",
@@ -75,6 +85,12 @@ auth_dlg = AuthDialog(auth_manager)
 if auth_dlg.exec() != QDialog.Accepted or not auth_dlg.session_token:
     auth_manager.close()
     sys.exit(0)
+
+# ── Déverrouille le dossier app/ (NTFS) → accès autorisé ────────────────────
+_unlock_app()
+
+# Enregistre le verrou à la fermeture de l'app
+app.aboutToQuit.connect(_lock_app)
 
 # Jeton deposé dans l'environnement → verrou d'accès à app/
 _token = auth_dlg.session_token
